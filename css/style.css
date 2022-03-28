@@ -1,2 +1,8 @@
 @charset "utf-8";
 #js_dom{background: #0000ff;}
+
+#dom_attr{transition: margin-left 2s;}
+
+#dom_attr.active{border: 4px solid #0000ff;margin-left: 400px;}
+
+#dom_attr[ajw="현혜원"]{padding: 10px;background: #ff0000;}

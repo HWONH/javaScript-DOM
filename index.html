@@ -91,6 +91,49 @@
 
     <h3>getElementById와 querySelector의 차이</h3>
     <p id="txt">텍스트</p>
+    <!-- ---------------------------------------------------- -->
+    <h3>문서 객체 조작</h3>
+    <div>
+        <button onclick="card_move();">카드 이동</button>
+        <button onclick="card_origin();">카드 원복</button>
+    </div>
+    <img id="dom_attr" src="img/ace.png" alt="카드 앞면">
+
+    <h3>문서의 내부 태그 조작</h3>
+    <div class="innerHTML">
+        <a id="more" href=""><span>더보기</span></a>
+    </div>
+
+    <h3>문서의 내부 텍스트 변경</h3>
+    <div class="innerText">
+        <p class="trip_fav">내가 가고 싶은 여행지<span>제주도</span></p>
+    </div>
+
+    <input type="text" placeholder="미리보기">
+    <input type="text" value="홍길동">
+    <input type="text" value="홍길만" readonly> <!-- 읽기전용 -->
+    <input type="text" value="강철수" disabled>
+
+    <input id="member_name" type="text">
+
+    <div class="agree">
+        <input type="checkbox" value="txt_agree">&nbsp;전체 동의
+    </div>
+
+    <div class="local_address">
+        <select name="" id="">
+            <optgroup label="시명">
+                <option value="busan">부산</option>
+                <option value="ky">경기</option>
+                <option value="se" selected>서울</option>
+            </optgroup>
+            <optgroup label="도명">
+                <option value="jn">경남</option>
+                <option value="gw">강릉</option>
+                <option value="cb">충북</option>
+            </optgroup>
+        </select>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

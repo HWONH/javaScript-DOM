@@ -92,3 +92,68 @@ console.log($txt_01);
 var $txt_02=document.querySelector("#txt");
 console.log($txt_02);
 // 문서의 전체로부터 특정 아이디를 찾아서 가져온다
+/* ---------------------------------------------------- */
+var $attr=document.querySelector("#dom_attr");
+var $attrSrc=$attr.src;
+// $attr.src : <img id="dom_attr" src="img/ace.png" alt="카드 앞면">의 태그 중에서 src 속성의 속성값을 가져오겠다는 항목
+console.log($attrSrc); // 소스의 절대경로
+
+var $getAttrSrc=$attr.getAttribute("src");
+console.log($getAttrSrc); // 소스의 상대경로; 내부의 속성값
+var $getAttrAlt=$attr.getAttribute("alt");
+console.log($getAttrAlt); // 소스의 대체 텍스트; 내부의 속성값
+
+
+// 속성의 변경
+$attr.setAttribute("src", "img/card.png");
+// setAttribute("변경할 속성명", "변경되어진 속성값")
+$attr.setAttribute("alt", "카드 뒷면");
+
+// 속성의 생성 : 원본 HTML 파일 상에는 존재하지 않지만 추가로 속성과 속성값을 생성
+function card_move(){
+    $attr.setAttribute("class", "active");
+}
+
+$attr.setAttribute("ajw", "현혜원");
+
+// 속성의 삭제 : 기존에 존재하던 속성의 속성 값을 삭제
+$attr.setAttribute("alt", "");
+function card_origin(){
+    $attr.setAttribute("class", "");
+}
+/* ---------------------------------------------------- */
+/* 
+var $innerHTML=document.getElementById("more").innerHTML;
+console.log($innerHTML); // .more의 하위 태그
+document.getElementById("more").innerHTML="<span>감추기</span>";
+ */
+var $html_a=document.getElementById("more");
+console.log($html_a);
+var $innerHTML=$html_a.innerHTML; // 선택자를 기준으로 하위요소를 저장
+console.log($innerHTML);
+$html_a.innerHTML="<i>하위요소 변경</i>"; // 선택자를 기준으로 하위요소 변경
+/* 
+변수값을 재선언한 것 뿐 위와 같이 적어야 하위요소가 변경된다
+$innerHTML="<i>하위요소 변경</i>"
+console.log($innerHTML); 
+*/
+/* ---------------------------------------------------- */
+var $text=document.getElementsByClassName("trip_fav")[0];
+console.log($text);
+var $innerText=$text.innerText;
+// 선택자를 기준으로 하위에 존재하는 모든 텍스트를 저장
+console.log($innerText);
+
+$text.innerText="이번 휴가 <i>부산</i>";
+// 현재 선택자가 담고 있는 내부의 텍스트를 새로운 텍스트로 교체(대입)
+/* ---------------------------------------------------- */
+var $name=document.querySelector("#member_name");
+$name.setAttribute("value", "강하늘");
+$name.setAttribute("readonly", "readonly"); // 두번째 인용구 안에 생략 가능하나 문법상 좋지 않음
+$name.setAttribute("disabled", "disabled");
+
+var $chk_box=document.querySelector(".agree input");
+$chk_box.setAttribute("checked", "checked");
+/* ---------------------------------------------------- */
+var $value=document.querySelector(".local_address select").value;
+console.log($value); // se(selected 속성을 가지고 있는 option 태그의 value 속성값을 불러온다)
