@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 - DOM(Document Object Model)</title>
+    <!-- 외부 스타일 시트(3순위) -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 내부 스타일 시트(2순위) -->
+    <style>
+        #js_dom{background: #ffff00;}
+    </style>
+</head>
+<body>
+    <!-- 인라인스타일시트(1순위) -->
+    <h1 id="js_dom" style="/* background: #008800; */">문서 객체 모델</h1>
+    <h1 id="js_dom" style="/* background: #008800; */">문서 객체 모델</h1>
+    
+    <h2>직접선택자 - 원거리선택자</h2>
+    <h3>클래스선택자(인덱스 번호 필수)</h3>
+    <div class="class_selector">
+        <p class="trip">제주</p> <!-- 0 -->
+        <p class="trip">부산</p> <!-- 1 -->
+        <p class="trip">강릉</p> <!-- 2 -->
+        <p class="trip">청주</p> <!-- 3 -->
+        <h2 class="trip">내가 선호하는 여행지 : 강릉</h2> <!-- 4 -->
+    </div>
+
+    <h3>태그(요소)선택자</h3>
+    <div class="element_selector">
+        <h4 class="car_01">현대 자동차</h4>
+        <h4 class="car_02">기아 자동차</h4>
+        <h4 class="car_03">쌍용 자동차</h4>
+    </div>
+
+    <h3>querySelector : 특정 선택자를 지목</h3>
+    <div class="query_unit">
+        <p class="ice_01">바람과 함께 사라지다</p>
+        <p class="ice_02">아몬드 봉봉</p>
+        <p class="ice_03">민트초고</p>
+        <p class="ice_04">초콜릿무스</p>
+    </div>
+    
+    <h3>querySelectorAll : 지목한 선택자를 모두 선택(복수)(인덱스 번호 필수)</h3>
+    <div class="query_All">
+        <p>레드</p>
+        <p>옐로우</p>
+        <p>그린</p>
+        <p>블루</p>
+        <p>퍼플</p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
